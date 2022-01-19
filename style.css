@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    gap: 10px 10px;
+    grid-template-areas:
+        "header header header"
+        "aside main main"
+        "footer footer footer";
+
+}
+
+body {
+    background-color: #f2f3f7
+}
+
+header {
+    grid-area: header;
+    background-color: #36344d;
+    height: 13vh;
+    color: white;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-rows: auto;
+    gap: 2px 0px;
+    grid-template-areas:
+        "logo menu info";
+}
+
+.logo {
+    display: flex;
+    height: 12vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.menu ul {
+    display: flex;
+    list-style-type: none;
+
+}
+
+.menu ul li {
+    margin: 10px;
+}
+
+
+.info {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.info ul {
+    display: flex;
+    list-style-type: none;
+    padding-right: 10px
+}
+
+.info ul li {
+    margin: 10px;
+}
+
+
+
+aside {
+    width: 400px;
+    grid-area: aside;
+    height: auto;
+}
+
+aside .plano {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid rgb(206, 199, 199);
+    border-radius: 5px;
+    background-color: white;
+    word-wrap: break-word;
+
+}
+
+aside .plano section:nth-child(2) {
+    margin-top: 3px;
+    border-top: 1px solid rgb(206, 199, 199);
+}
+
+aside .plano section:nth-child(3) {
+    margin-top: 10px;
+    border-top: 1px solid rgb(206, 199, 199);
+}
+
+aside p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+aside select {
+    margin: 10px;
+    width: 300px;
+    height: 30px;
+    border: 1px solid rgb(206, 199, 199);
+    border-radius: 5px;
+}
+
+.plano-title {
+    color: rgb(107, 100, 107);
+}
+
+
+main {
+    grid-area: main;
+    width: 900px;
+
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main-item {
+    width: calc(30% - 10px);
+    height: 200px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgb(206, 199, 199);
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.main-item img {
+    width: 100px;
+}
+
+
+footer {
+    grid-area: footer;
+    background-color: #36344d;
+    height: 20vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: white;
+}
+
+.copyright {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 600px) {
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto auto;
+        grid-template-areas:
+            "header"
+            "aside"
+            "main"
+            "footer";
+        gap: 1px 1px;
+
+    }
+
+    /* ___HEADER___ */
+
+    header {
+        width: 100%;
+        height: auto;
+    }
+
+    nav {
+        grid-template-columns: 100%;
+        grid-template-rows: auto auto auto;
+        gap: 0px 0px;
+        grid-template-areas:
+            "logo"
+            "menu"
+            "info";
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .menu ul {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu ul li {
+        padding: 5px;
+    }
+
+
+    .info {
+        display: none;
+    }
+
+    /*___ASIDE___*/
+
+    aside {
+        width: 90%;
+    }
+
+    aside .plano {
+        width: 100%;
+        margin: 3px;
+        padding: 10px;
+    }
+
+    aside select {
+        width: 100%;
+
+    }
+
+
+    /* ___MAIN___*/
+
+    main {
+        width: 100%;
+
+    }
+
+    .main-item {
+        width: 100vw;  
+
+    }
+
+    /* ___FOOTER___*/
+
+
+    footer {
+        justify-content: center;
+        align-items: center;
+
+    }
+   
+
+}
