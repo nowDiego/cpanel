@@ -1,3 +1,3 @@
-## Cpanel de Hospedagem
-Clone Interface de Cpanel de Hospedagem usando Html, CSS e utilizando o modelo de layout Grid e Flexbox 
+## Cpanel de Hospedagem de Site
+Clone Interface de Cpanel de Hospedagem de Site usando Html, CSS e utilizando o modelo de layout Grid e Flexbox 
 
